@@ -5,8 +5,16 @@ http://techtalk.virendrachandak.com/sticky-header-and-footer-using-css/#axzz2tY8
 
 */
 
+body { 	
+	background-image:url('http://www.blm.gov/pgdata/etc/medialib/blm/wy/programs/forestry.Par.27404.Image.-1.-1.1.gif');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+	background-size:900px 900px;
+	background-color: #000000;
+	color:#B0B0B0;
+	}
 
-<<<<<<< HEAD
 h1 {
 	font-family: 'Galdeano', sans-serif;
 	font-size: 50px;
@@ -23,23 +31,15 @@ p.foot {
 	margin-bottom: 15px;
 }
 
-
-#form_body 
-{
-	margin-top: 200px;
-
+#form_body {
+	
 	text-align: center;
 	border:2px solid;
+	border-radius:25px;
 	background-color: #888888;
-	border-top-right-radius: 40px;
-	border-top-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-	border-bottom-left-radius: 40px;
-	height: 400px;
-	text-align: center;
-	background-color: lightgreen;
-	display: table-cell;
-	vertical-align: middle;
+	height: 300px;
+	vertical-align: center;
+	opacity: .8;
 }
 
 
@@ -50,20 +50,17 @@ body {
  
 /* Make Header Sticky */
 #header_container { 
-
 					background:rgba(0, 0, 0, 0.8); 
 					border:medium groove #2E2E2E; 
 					height:100px; 
 					left: 0; 
-
 					position:fixed;
 					width:100%;
 					top:0; 
 					}
 #header{ 
-		line-height:150px; 
+		line-height:100px; 
 		margin:0 auto; 
-
 		width:100%; 
 		text-align:center; 
 		color: rgb(0,0,0);}
@@ -73,17 +70,13 @@ body {
 	margin: 0 auto;
 	background-image: "http://www.blm.gov/pgdata/etc/medialib/blm/wy/programs/forestry.Par.27404.Image.-1.-1.1.gif"
 }
-
  
 /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
 #container {
 			margin:0 auto; 
 			overflow:auto; 
-
 			padding:150px 0; 
 			width:950px; }
-
-
 #content{}
 
 
@@ -136,4 +129,8 @@ width:100px;
 		margin:0 auto; 
 		width:940px; 
 		text-align:center; }
+form {
+	margin-top: 50px;
+	color: rgb(0,0,0);
+}
 
