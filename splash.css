@@ -26,9 +26,10 @@ h1 {
 p.foot {
 	font-family: 'Galdeano', sans-serif;
 	font-size: 20px;
-	color: #FBEFEF;
+	color: #E0E0E0;
 	padding-bottom: 10px;
 	margin-bottom: 15px;
+	float: left;
 }
 
 #form_body {
@@ -36,10 +37,9 @@ p.foot {
 	text-align: center;
 	border:2px solid;
 	border-radius:25px;
-	background-color: #888888;
+	background:rgba(160, 160, 160, 0.5); 
 	height: 300px;
 	vertical-align: center;
-	opacity: .8;
 }
 
 
@@ -52,18 +52,18 @@ body {
 #header_container { 
 					background:rgba(0, 0, 0, 0.8); 
 					border:medium groove #2E2E2E; 
-					height:100px; 
+					height:75px; 
 					left: 0; 
 					position:fixed;
 					width:100%;
 					top:0; 
 					}
 #header{ 
-		line-height:100px; 
+		line-height:75px; 
 		margin:0 auto; 
 		width:100%; 
 		text-align:center; 
-		color: rgb(0,0,0);}
+		}
 
 #backround_img	{
 	position: relative;
@@ -81,51 +81,36 @@ body {
 
 
 #button {
-font-family: 'Varela Round', sans-serif;
-
-background:#21610B;
-
-color:white;
-
-border-style:outset;
-
-border-color:#000000;
-
-height:40px;
-
-width:100px;
-
-
-}
+		font-family: 'Varela Round', sans-serif;
+		background:#21610B;
+		color:white;
+		border-style:outset;
+		border-color:#000000;
+		height:30px;	
+		width:100px;
+		}
 #button:hover {
-
-background:#000000;
-
-color:white;
-
-border-style:outset;
-
-border-color:#000000;
-
-height:40px;
-
-width:100px;
-
-}
+		background:#000000;
+		color:white;
+		border-style:outset;
+		border-color:#000000;	
+		height:30px;
+		width:100px;
+		}
  
 /* Make Footer Sticky */
 #footer_container { 
 					background:rgba(0, 0, 0, 0.8); 
 					border:medium groove #2E2E2E; 
 					bottom:0; 
-					height:60px; 
+					height:40px; 
 					left:0;
 					position:fixed; 
 					width:100%; }
 
 
 #footer {
-		line-height:60px;
+		line-height:40px;
 		margin:0 auto; 
 		width:940px; 
 		text-align:center; }
@@ -133,4 +118,23 @@ form {
 	margin-top: 50px;
 	color: rgb(0,0,0);
 }
+.form_font{
+	font-family: 'Varela Round', sans-serif;
+	font-size: 18px;
+	color: #000000;
 
+}
+.link_on_foot{
+	font-family: 'Varela Round', sans-serif;
+	color: #E0E0E0;
+	float: left;
+	margin-left: 30px;
+	text-decoration:none;
+
+}
+.link_on_foot:hover{
+	font-family: 'Varela Round', sans-serif;
+	color: #84A983;
+	text-decoration:none;
+
+}
