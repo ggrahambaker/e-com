@@ -40,6 +40,11 @@ p.foot {
 	height: 300px;
 	vertical-align: center;
 	opacity: .8;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
+
 }
 
 
