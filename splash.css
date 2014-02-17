@@ -40,6 +40,10 @@ p.foot {
 	background:rgba(160, 160, 160, 0.5); 
 	height: 300px;
 	vertical-align: center;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
 
 }
 
