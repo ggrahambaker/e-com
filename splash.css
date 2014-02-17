@@ -6,14 +6,21 @@ http://techtalk.virendrachandak.com/sticky-header-and-footer-using-css/#axzz2tY8
 */
 
 
-#form_body {
+#form_body 
+{
 	margin-top: 200px;
 	text-align: center;
 	border:2px solid;
-	border-radius:25px;
 	background-color: #888888;
-	height: 300px;
-	vertical-align: center;
+	border-top-right-radius: 40px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 40px;
+	height: 400px;
+	text-align: center;
+	background-color: lightgreen;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 
