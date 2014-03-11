@@ -6,7 +6,7 @@ http://techtalk.virendrachandak.com/sticky-header-and-footer-using-css/#axzz2tY8
 */
 
 body { 	
-	background-image:url('http://www.blm.gov/pgdata/etc/medialib/blm/wy/programs/forestry.Par.27404.Image.-1.-1.1.gif');
+	background-image: url(images/boardwalk.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center; 
@@ -46,7 +46,7 @@ h2{
 	text-align: center;
 	border:2px solid;
 	border-radius:25px;
-	background:rgba(160, 160, 160, 0.5); 
+	background:rgba(160, 160, 160, 0.75); 
 	height: 70%;
 	vertical-align: center;
 	padding-top: 40px;
