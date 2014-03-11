@@ -87,7 +87,7 @@ body {
 #backround_img	{
 	position: relative;
 	margin: 0 auto;
-	background-image: "http://www.blm.gov/pgdata/etc/medialib/blm/wy/programs/forestry.Par.27404.Image.-1.-1.1.gif"
+	
 }
  
 /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
