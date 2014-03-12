@@ -95,7 +95,12 @@ body {
 			margin:0 auto; 
 			overflow:auto; 
 			padding:150px 0; 
-			width:950px; }
+			width:950px; 
+			position: relative;
+			top: 100px;
+			
+
+		}
 #content{}
 
 
