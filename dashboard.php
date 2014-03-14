@@ -1,3 +1,6 @@
+<?php require_once("lib/sessions.php") ?>
+<?php requireUser(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,18 +14,11 @@
 
 </head>
 <body>
-
-
-<div id="container">
-	<div id="backround_img">
-		<div id="form_body">
-			<form>
-			<p class="form_font"> Username: </p> <input type="text" name="firstname" size="35"><br>
-			<p class="form_font"> Password: </p> <input type="password" name="firstname" size="35"><br><br>
-			<input id="button" type="submit" value="Submit">
-			</form>
-		</div>
+	<?php require_once("header.php") ?>
+	
+	<div id="container">
+		<h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
 	</div>
-</div>
-</body>
+	
+</body>	
 </html>
