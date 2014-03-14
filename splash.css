@@ -6,7 +6,8 @@ http://techtalk.virendrachandak.com/sticky-header-and-footer-using-css/#axzz2tY8
 */
 
 body { 	
-	background-image: url(images/boardwalk.jpg);
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Redwood_National_Park,_fog_in_the_forest.jpg");
+	opacity: 0.8;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center; 
