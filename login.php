@@ -19,10 +19,12 @@
 		<div id="backround_img">
 			<div id="form_body">
 
+				<?php require_once("lib/flash.php"); ?>
+
 				<form action="login.php" method="post">
 
 					<p class="form_font"> Username: </p> <input type="text" name="username" size="35"><br>
-					<p class="form_font"> Password: </p> <input name="password" size="35"><br><br>
+					<p class="form_font"> Password: </p> <input name="password" type="password" size="35"><br><br>
 
 					<input id="button" type="submit" name="submit" value="Create Account">
 					<input id="button" type="submit" name="submit" value="Sign In">
@@ -35,3 +37,5 @@
 	<?php require_once("footer.php") ?>
 </body>
 </html>
+
+<?php clearFlash(); ?>

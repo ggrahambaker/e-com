@@ -17,8 +17,20 @@
 	<?php require_once("header.php") ?>
 	
 	<div id="container">
-		<h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
+		<?php require_once("lib/flash.php"); ?>
+
+		
+
+		<div id="backround_img">
+			<div id="form_body">
+				<h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
+				<?php require_once("lib/flash.php"); ?>
+
+			</div>
+		</div>
 	</div>
-	
+	<?php require_once("footer.php") ?>
 </body>	
 </html>
+
+<?php clearFlash(); ?>
