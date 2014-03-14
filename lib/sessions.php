@@ -1,4 +1,5 @@
 <?php
+
 define ("FILENAME", dirname(__FILE__) . "/passwords.txt");
 require 'PasswordHash.php';
 
@@ -39,11 +40,13 @@ function authenticate($username, $password)
 {
     $user = getUser($username);
     if($user == null) {
-        die("Username not found");
+        setFlash("error", "Username not found");
+        redirect("login.php");
     }
     $hasher = new PasswordHash(8,false) or die("unable to hash PW");
     if (!$hasher->CheckPassword($password, $user[1])) {
-        die("Wrong password");
+        setFlash("error", "Bad password");
+        redirect("login.php");
     }
 }
 
@@ -62,22 +65,33 @@ function getCurrentUser()
 function getCurrentUserName()
 {
     return getCurrentUser()[0];
+    //return getCurrentUser();
 }
 
 function requireUser()
 {
-    getCurrentUser() or redirect("/login.php");
+    if (!getCurrentUser()) {
+        setFlash("notice", "You have to be signed in to see that page.");
+        redirect("/login.php");
+    }
 }
 
 function signUp($username, $password)
 {
     if(getUser($username)) 
     {
-        die("username taken");
+        setFlash("error", "Bad password");
+        redirect("login.php");
+    }
+    if(strlen($username) < 1)
+    {
+        setFlash("error", "Username can't be blank");
+        redirect("login.php");        
     }
     if(strlen($password) < 6)
     {
-        die("password must be more than 6 characters");
+        setFlash("error", "Password is too short");
+        redirect("login.php");
     }
     storeUser($username, $password);
     signIn($username, $password);
@@ -88,12 +102,14 @@ function signIn($username, $password)
 {
     authenticate($username, $password);
     setCurrentUser($username);
+    setFlash("notice", "You are now signed in.");
     redirect("/dashboard.php");
 }
 
 function signOut()
 {
     setCurrentUser(null);
+    setFlash("notice", "You are now signed out.");
     redirect("login.php");   
 }
 
@@ -101,6 +117,23 @@ function redirect($url)
 {
     header('Location: '. $url);
     die();
+}
+
+function setFlash($type, $message) 
+{
+    $_SESSION[$type] = $message;
+}
+
+function getFlash($type) {
+    if (isset($_SESSION[$type])) {
+        return $_SESSION[$type];
+    }
+}
+
+function clearFlash()
+{
+    unset($_SESSION["error"]);
+    unset($_SESSION["notice"]);
 }
 
 session_start();
