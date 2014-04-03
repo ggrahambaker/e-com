@@ -24,6 +24,11 @@ h1 {
 
 }
 
+h3 {
+	font-family: 'Galdeano', sans-serif;
+	color: #21610B;
+}
+
 .body_text{
 	color: #000000;
 	font-weight: bolder;
@@ -142,6 +147,11 @@ body {
 form {
 	margin-top: 50px;
 	color: rgb(0,0,0);
+}
+p {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 18px;
+	color: #000000;
 }
 .form_font{
 	font-family: 'Varela Round', sans-serif;

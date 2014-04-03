@@ -1,0 +1,333 @@
+ELECTRONIC COMMERCE
+
+day 1
+
+ETHERNET
+-network method
+
+OLD VERSION
+-sends packets of bits back and forth to communicate
+	-detects for collisions between different messages 
+-minimum content size is to make sure that the wire can detect collisions
+
+CURRENT VERSION
+-star topology
+	-computers now just look to network for information. 
+-repeater
+	-this network would forwards all packets to all attached computers
+	-faster, as soon as the first bit in the packet comes in, the network passes it on
+-switcher
+	-this passes specific packets to specific receivers 
+	-this allows multiple people to send packets to multiple receivers at the same time
+	-slower, must wait to see the whole packet to pass it along
+	-full duplex, allows a to send to b, and c to send to a at the same time
+
+PROTOCOLS
+-in order to talk to someone, you need to know their MAC address. 
+	-MAC address, a unique signature for each computer
+-the switch needs to know the MAC address of each one of the attached ports
+	-if a switch does not recognize the MAC address, it will turn into a repeater and send it everywhere in the hope that it finds the MAC address
+
+
+IP, Internet Protocol
+	-address: 164.143.1.1
+	-Net Mask: 255.255.255.0
+		-indicates if the IP address is local or not
+		-if the ip address line up with the 
+-properties
+	-best effort delivery ()
+		-packet loss
+		-data corruption
+		-out of outer delivery
+	-connectionless (stateless)
+
+
+ROUTERS vs SWITCHES
+-routers make decisions based on IP address
+-if IP address is local, operates as a switch, if its not local, it will send the packet to the Default Gateway, that will take care of it. 
+
+
+
+——————
+things to ask about: net mask
+
+day 2
+
+IP v4 - ip address with 4 billion possibilities (2^32)
+IP v6 - new ip address system
+
+
+if the node decides that the IP address is not local, than it will forward it to the IP address of the router
+
+a gateway is the same thing as a router. the gateway offers a connection from the local network to the rest of the world
+
+
+
+IP -properties
+	-best effort delivery ()
+		-packet loss
+		-data corruption
+		-out of outer delivery
+	-connectionless (stateless)
+
+TCP Properties
+-reliable
+-ordered
+-connections
+	-connected to a piece of soft ware running on hardware
+	-Ports
+		- 192.168.1.1:80, the 80 indicates a particular port, or the location of where the program is running
+
+
+Application level
+DHPC - assigns the computer that goes on the internet an IP address
+DNS - the thing that switches the text on the browser, to an IP address
+FTP, SFTP - file transfer stuff
+
+IMAP - email
+SSL (secure socket layer) - all the data on the wire is encrypted
+
+What does this have to do with E commerce
+
+DNS - find server
+HTTP - serve web pages
+SSH & SSL - secure data
+
+
+Public vs Private IP addresses
+-4 billion addresses
+-Private IP addresses give us more IP addresses 
+Private IP address rules
+1. a public IP can never send to a private one
+2. a private IP have to 
+
+
+Client / Server model 
+ftp, web brewers, ssh on the client side all hook up with compartmentalized servers
+
+
+anatomy of a web address
+
+http://server.com/directory1/directory2/page.html
+
+
+INTRO TO SERVERS
+
+PuTTY
+FileZilla
+Linux command shells
+
+
+
+HOME WORK
+
+I am a database.pugetsound.edu guy
+
+
+things that you need to make a website
+
+-domain name 
+	- registrar
+-Server
+	- hosting companies
+	- why would you want a host company?
+		-maintenance
+		-if there is lots of traffic, they will fix it
+		-how to choose
+			- price, uptime, services
+		- ICDSoft a good hosting company
+
+Intro to HTML
+
+~username means the root directory for the username
+
+
+What do hackers do??
+-Earn Fame
+-Vandalism
+-personal data
+-extortion
+-botnets
+-denial of service
+-social engineering
+	-social agenda to get into 
+
+
+Attack Vectors
+-sneaker net
+	- virus built into drive
+	- defense
+		- disable autorun
+-booby-trapped emails
+	- defense
+		- don’t open attachments
+-tainted links
+	- defense
+		- be careful where you click
+-drive-by downloads
+	- defense
+		- secure browser
+
+
+
+Why is it so hard to secure a browser?
+- 
+What does a browser do?
+	-reads the text file and interprets it to get all the necessary resources
+What else do browsers do?
+	-download stuff/upload
+		-so they have to communicate with your hard drive
+
+
+
+Secure
+	- a computer is secure if you can depend on it and its software to behave as you expect
+	- secure a web server and the data that is on it
+	- securing information that travels between the server and the user
+	- securing the end user’s machine
+
+
+Securing the server
+	- physical access
+	- access control
+	- only “safe” programs
+	- redundancy
+	- sufficient capacity
+	- multiple connections
+	- securing DNS
+
+ 
+
+
+
+Network Terms
+
+-HOST
+	-computer connected to a network
+-NETWORK
+	-collection of locally connected computers
+	-what is a locally connected network
+		-net mask
+			- indicates if IP is local or not
+-GATEWAY
+	-connections between networks
+
+-FIREWALL
+	-packet filter
+		-filter on many different types of criteria
+			-ip address, port number, ect. 
+
+
+THE INTERNET
+
+i need a connection with an internet service company to get on the internet, so you have to payyy. 
+
+
+
+Naming Servers
+	- network solutions
+	- ICANN
+		- stability: first priority
+		- competition
+			- enhances user choice and satisfaction
+		- private sector, bottom-up coordination
+			- better for companies to take care of it because its more efficient than the government
+		- representation
+				
+	
+Cryptography
+
+plain text -> encrypt -> cipher text
+	   <- decrypt <-
+
+Encryption vs Obfuscation
+- encryption is more
+	- mathematical
+	- harder
+	- secure
+
+Which thing is unknown?
+	-encryption
+		- e(plainText, k) -> cipherText
+		- k is unknown
+	- obfuscation
+		- o(plainText) -> obfuseText
+		- o is unknown
+
+How to pick a good key?
+	-“Random” number
+		- cryptographically secure random numbers
+- the Random class in java is just a list of random numbers, so its not truly random because there will be a pattern at 
+	 
+
+html formszz.
+get vs post
+
+- get
+	- data is part of URL
+	- data can be part of bookmark
+	- data is visible
+		- this is nice if the data is not private
+- post
+	- data is part of request
+	- no size limit
+
+
+
+Cryptography
+authentication
+	- i am who i claim to be
+authorization
+	- i authorize the following action
+confidentiality
+	- private communication
+integrity
+	- nobody tampered with this
+
+
+Cryptography cant…
+
+- protect unencrypted data
+- protect against stolen keys
+- protect against DoS
+- protect against Traffic Analysis
+	- meta data
+		- who sent what to who
+		- it doesn’t really matter who is saying what
+- protect against a traitor or mistake
+- protect against an open system
+
+
+Digital Copyright Millennial Act
+- makes it illegal to pass information about how to break into 
+
+
+
+
+Who are you?
+
+Identification, Authentication, Authorization? 
+
+Why is this an issue?
+	- loss of neighborhood
+	- trust
+		- cash purchases
+	- enforcement
+
+Computer based
+	- password
+	- biometrics
+	- security devices
+	- location
+
+Identity based on…
+	- What you know
+	- What you have
+	- Unique aspects of you
+
+
+
+
+
+————
+
