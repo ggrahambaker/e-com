@@ -17,17 +17,20 @@
 	<?php require_once("header.php") ?>
 	
 	<div id="container">
-		
+		<?php require_once("lib/flash.php"); ?>
 
 		
 
 		<div id="backround_img">
 			<div id="form_body">
-				<?php require_once("lib/flash.php"); ?>
-				<h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
-				
-
+				<h1>Here are some books you can buy - GOOD LUCK!</h1>
+				<br>
+				<p>Ender's Game <br>
+				Every Harry Potter <br>
+				LOTR <br>
+				How to Build an Old Wooden Ships: a beginner's guide</p> 
 			</div>
+			
 		</div>
 	</div>
 	<?php require_once("footer.php") ?>

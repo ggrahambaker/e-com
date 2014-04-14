@@ -38,4 +38,4 @@
 </body>
 </html>
 
-<?php clearFlash(); ?>
+<?php clearFlash();?>
