@@ -23,7 +23,7 @@ form, table {
   <?php require_once("lib/flash.php"); ?>
   <div id="backround_img">
     <div id="form_body">
-      <h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
+      <h1>Classes</h1>
       <?php
 $classnumber = 1; // Change to actual number displayed
 for ($i=0; $i<=$classnumber-1; $i++) {

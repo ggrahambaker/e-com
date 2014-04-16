@@ -23,7 +23,7 @@
 
 		<div id="backround_img">
 			<div id="form_body">
-	            <h1>Welcome to your dashboard, <?php echo getCurrentUserName(); ?></h1>
+	            <h1>Books</h1>
 				<h3>Here are some books you can buy - GOOD LUCK!</h3>
 				<br>
 				<p>Ender's Game <br>
