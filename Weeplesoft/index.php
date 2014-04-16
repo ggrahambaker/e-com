@@ -1,4 +1,10 @@
-<?php require_once("lib/sessions.php") ?>
+<?php require_once("lib/sessions.php");
+    $userName = getCurrentUserName();
+    if(!empty($userName))
+    {
+        redirect("dashboard.php");
+    }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -7,9 +13,9 @@
 <title>Welcome to Weeplesoft</title>
 
 
-<link rel="stylesheet" type="text/css" href="splash.css">
-<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="splash.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
