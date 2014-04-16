@@ -22,23 +22,10 @@
 
 <div id="container">
 	<div class="detail">
-		<img src="images/desc_book.jpg"  height="42" width="42" alt="woooah">
-		<p class="form_font">Math 301</p>
-		<p class="form_font">You are gonna learn a bunch in this class!</p> 
 
-		                <form action="checkout.php" method="post">
-		                <p> Select Section: </p> 
+	<h1>CHECK OUT</h1>
+	<p>under contruction</p>
 
-							<select>
-								<option value="null"></option>
-								<option value="section_a">Section A</option>
-								<option value="section_b">Section B</option>
-							</select>
-						
-		                    <input id="button" type="submit" name="submit" value="Submit">
-                		</form>
-
-                		<a href="classes.php">Return to Course Offerings</a>
 	</div>
 </div>
 

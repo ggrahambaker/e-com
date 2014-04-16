@@ -1,0 +1,41 @@
+CREATE TABLE Courses
+(
+CourseId int, 
+CourseName varchar(100),
+CourseDes varchar(255),
+CourseTeacher varchar(45),
+DeptID int,
+CourseFee int,
+FeeDescription varchar(255),
+CourseImg varchar(255)
+);
+
+CREATE TABLE Students
+(
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+Standing int,
+MajorId int
+);
+
+CREATE TABLE StudentCart
+(
+PersonID int,
+ClassId int, 
+
+
+);
+
+CREATE TABLE PastCourses
+(
+PersonID int,
+ClassId int
+);
+
+
+Select 
+
+
+		
