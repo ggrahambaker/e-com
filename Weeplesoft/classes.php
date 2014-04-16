@@ -18,7 +18,9 @@ form, table {
 </style>
 </head>
 <body>
-<?php require_once("header.php") ?>
+<?php require("head_foot.php");
+printHeader();
+?>
 <div id="container">
   <?php require_once("lib/flash.php"); ?>
   <div id="backround_img">
@@ -53,7 +55,7 @@ for ($i=0; $i<=$classnumber+1; $i++) { // take out the classnumber addition
     </div>
   </div>
 </div>
-<?php require_once("footer.php") ?>
+<?php printFooter(); ?>
 </body>
 </html>
 <?php clearFlash(); ?>

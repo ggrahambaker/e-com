@@ -7,7 +7,9 @@ CourseTeacher varchar(45),
 DeptID int,
 CourseFee int,
 FeeDescription varchar(255),
-CourseImg varchar(255)
+CourseImg varchar(255), 
+SlotsAvail int
+
 );
 
 CREATE TABLE Students
@@ -35,7 +37,14 @@ ClassId int
 );
 
 
-Select 
+
+Class tables
+At least 3 departments
+At least 3 classes/department
+Select by department
+Sort by Dept, Time of Day
+Must include images of textbooks
+
 
 
 		
