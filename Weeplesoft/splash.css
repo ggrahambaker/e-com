@@ -6,7 +6,8 @@ http://techtalk.virendrachandak.com/sticky-header-and-footer-using-css/#axzz2tY8
 */
 
 body { 	
-	background-image: url(images/boardwalk.jpg);
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Redwood_National_Park,_fog_in_the_forest.jpg");
+	opacity: 0.8;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center; 
@@ -160,6 +161,15 @@ form {
 	font-family: 'Varela Round', sans-serif;
 	color: #84A983;
 	text-decoration:none;
+
+}
+
+.text_on_foot{
+	font-family: 'Varela Round', sans-serif;
+	color: #E0E0E0;
+	float: left;
+	margin-left: 30px;
+	text-decoration:none;
 }
 
 .alert {
@@ -184,24 +194,4 @@ form {
 	background: #FCACAC;
 	border: 1px solid #D48787;
 	color: #825353;
-}
-
-
-.detail{
-	text-align: center;
-	border:2px solid;
-	border-radius:25px;
-	background:rgba(160, 160, 160, 0.75); 
-	height: 70%;
-	vertical-align: center;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	border-top-right-radius: 25px;
-	border-top-left-radius: 100px;
-	border-bottom-right-radius: 100px;
-	border-bottom-left-radius: 25px;
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-
 }
