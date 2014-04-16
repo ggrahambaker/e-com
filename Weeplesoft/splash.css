@@ -20,7 +20,6 @@ h1 {
 	font-family: 'Galdeano', sans-serif;
 	font-size: 50px;
 	color: #21610B;
-	margin-top: -10px;
 
 }
 
@@ -45,17 +44,17 @@ h2{
 #form_body {
 	
 	text-align: center;
-	border:2px solid;
+	border:4px solid;
 	border-radius:25px;
 	background:rgba(160, 160, 160, 0.75); 
-	height: 70%;
+	height: 100%;
 	vertical-align: center;
 	padding-bottom: 40px;
 	border-top-right-radius: 25px;
 	border-top-left-radius: 100px;
 	border-bottom-right-radius: 100px;
 	border-bottom-left-radius: 25px;
-	width: 60%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -91,17 +90,19 @@ body {
 }
  
 /* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
-#container {
-			margin:0 auto; 
-			overflow:auto; 
-			padding:150px 0; 
-			width:950px; 
-			position: relative;
-			top: 100px;
-			
+#container 
+{
+	margin:0 auto; 
+	overflow:auto; 
+	padding:150px 0; 
+	width:950px; 
+	position: relative;
+	top: 100px;		
+}
+#content
+{
 
-		}
-#content{}
+}
 
 
 #button {
@@ -177,15 +178,23 @@ form {
 	margin-right: auto;
 	margin-left: auto;
 	border: 1px solid #555;
-	padding: 15px;
+	padding: 15px;h1
 	color: #333;
 	text-align: center;
 	border-radius: 5px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 15px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
 }
 
 .alert-notice {
 	background: #FAE3B1;
-	border: 1px solid #DEC797;
+	border: 2px solid #DEC797;
 	color: #82724F;
 }
 
