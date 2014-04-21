@@ -1,5 +1,5 @@
-<?php require_once("lib/sessions.php") ?>
-
+<?php require_once("lib/sessions.php");
+require("head_foot.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +13,7 @@
 
 </head>
 <body>
-	<?php require_once("header.php") ?>
+	<?php printHeader(); ?>
 
 	<div id="container">
 		<div id="backround_img">
@@ -34,7 +34,7 @@
 		</div>
     </div>
 	
-	<?php require_once("footer.php") ?>
+	<?php printFooter(); ?>
 </body>
 </html>
 

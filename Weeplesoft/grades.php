@@ -1,4 +1,4 @@
-<?php require_once("lib/sessions.php") ?>
+<?php require_once("lib/sessions.php");?>
 <?php requireUser(); ?>
 
 <!DOCTYPE html>
@@ -13,11 +13,8 @@
 <link href='http://fonts.googleapis.com/css?family=Galdeano' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<div id="header_container">
-		<div id="header">
-		<h1> WEEPLESOFT </h1>
-		</div>
-	</div>
+<?php require("head_foot.php");
+printHeader(); ?>
 
 
 <div id="container">
@@ -43,14 +40,7 @@
 </div>
 
 
-<div id="footer_container">
-<div id="footer">
-
-	<a class="link_on_foot" href="privacy_policy.html" target="">Privacy Policy</a>
-	<a class="link_on_foot" href="contact_us.html" target="">Contact Us</a>
-
-</div>
-</div>
+<?php printFooter(); ?>
 <script>
 function gradeCheck()
 {

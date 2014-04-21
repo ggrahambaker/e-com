@@ -24,12 +24,11 @@
 		<div id="backround_img">
 			<div id="form_body">
 	            <h1>Books</h1>
-				<h3>Here are some books you can buy - GOOD LUCK!</h3>
 				<br>
-				<p>Ender's Game <br>
+				<p class="body_text">Ender's Game <br>
 				Every Harry Potter <br>
 				LOTR <br>
-				How to Build an Old Wooden Ships: a beginner's guide</p> 
+				How to Build an Old Wooden Ship: a beginner's guide</p> 
 			</div>
 			
 		</div>

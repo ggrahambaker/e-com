@@ -32,6 +32,8 @@
                     <p class="form_font"> Username: </p> <input type="text" name="username" size="35"><br>
                     <p class="form_font"> Password: </p> <input name="password" type="password" size="35"><br><br>
 
+
+
                     <input id="button" type="submit" name="submit" value="Create Account">
                     <input id="button" type="submit" name="submit" value="Sign In">
                     
