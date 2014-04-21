@@ -36,15 +36,12 @@ PersonID int,
 ClassId int
 );
 
+- - get everything printed out
+SELECT * FROM classes;
 
+— get everything in a particular department
+SELECT * FROM classes WHERE CourseId = 10;
 
-Class tables
-At least 3 departments
-At least 3 classes/department
-Select by department
-Sort by Dept, Time of Day
-Must include images of textbooks
+- - sort by division
+SELECT MAX(ClassId) AS 'ClassId' FROM classes;
 
-
-
-		
