@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<?php
+define ("FILENAME", "/home/tail/html_data/passwords.txt");
+require 'PasswordHash.php';
+
+function getPW($username)
+{
+    $file = fopen(FILENAME, "r") or die("Unable to open pw file");
+    while (!feof($file))
+    {
+        $user = fgetcsv($file);
+        if ($user[0] == $username)
+        {
+            fclose($file);
+            return $user[1];
+        }
+    }
+    fclose($file);
+}
+
+if (empty($_POST))
+{
+    echo <<<FORMSTUFF
+    <div id="header_container">
+        <div id="header">
+        <h1> WEEPLESOFT </h1>
+        </div>
+    </div>
+
+
+<div id="container">
+    <div id="backround_img">
+        <div id="form_body">
+            <form action = "createuser.php" method = "post">
+            <p class="form_font"> Username: </p> <input type="text" name="firstname" size="35"><br>
+            <p class="form_font"> Password: </p> <input type="password" name="firstname" size="35"><br><br>
+
+            <input type=submit name="submit" value="create"><br>
+            <input type=submit name="submit" value="login"><br>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer_container">
+<div id="footer">
+
+    <a class="link_on_foot" href="privacy_policy.html" target="">Privacy Policy</a>
+    <a class="link_on_foot" href="contact_us.html" target="">Contact Us</a>
+
+</div>
+</div>
+FORMSTUFF;
+} else {
+    if ($_POST["submit"] == "create")
+    {
+        $pw = getPW($_POST['username']);
+        if ($pw != null)
+        {
+            echo "username already exists";
+        } else {
+            $password = $_POST["password"];
+            $hasher = new PasswordHash(8,false) or die("unable to hash PW");
+            $hash = $hasher->HashPassword($password);
+            if (strlen($hash)< 20) die("Invalid hashed PW");
+            $file =fopen(FILENAME, "a") or die("Unable to open pw file");
+            fputs($file, $_POST["username"] . "," . 
+                $hash . "\n")
+                or die("Unable to update pw file");
+            fclose($file)
+                or die("Unable to update pw file");
+            echo "user was created<br>";
+        }
+    } elseif ($_POST["submit"] == "login") {
+        $hashed_pw = getPW($_POST['username']);
+        if ($hashed_pw != null)
+        {
+            $hasher = new PasswordHash(8,false) or die("unable to hash PW");
+            if ($hasher->CheckPassword($_POST['password'], $hashed_pw))
+                echo "login successful<br>";
+            else
+                echo "invalid username/password<br>";
+        }
+    }
+}
+?>
+</body>
+</html>
+
+
+
