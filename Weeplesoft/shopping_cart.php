@@ -36,7 +36,21 @@ form, table {
 			$query = "DELETE FROM cart WHERE username='$username' AND class='$removing'";
 			$db->query($query);
 		}
-		
+		//Checks if user's incrementing anything; if so, increment.
+		if (!empty($_GET['add'])) 
+		{
+			$add = $_GET['add'];
+			$query="UPDATE cart SET number=number+1 WHERE username='$username' AND class='$add'";
+			$db->query($query);
+		} 
+		if (!empty($_GET['subtract']))
+		{
+			if ($_GET['current']!=1) {
+			$subtract = $_GET['subtract'];
+			$query="UPDATE cart SET number=number-1 WHERE username='$username' AND class='$subtract'";
+			$db->query($query);
+			}
+		}
 		//Checks if user's coming from a reorder; if so, order them.
 		if (empty($_GET['order'])) 
 		{
@@ -102,7 +116,7 @@ form, table {
 			{
 				echo "<a href='shopping_cart.php?order=Fee DESC'>";
 			}
-			echo "Price</a></th>";
+			echo "Price</a></th><th>";
 			if ($_GET['order']!='number') 
 			{
 				echo "<a href='shopping_cart.php?order=number'>";
@@ -115,7 +129,7 @@ form, table {
 		} 
 		else 
 		{
-			echo "<a href='shopping_cart.php?order=ClassName'>Class</a></th><th><a href='shopping_cart.php?order=Dept'>Department</a></th><th><a href='shopping_cart.php?order=Fee'></th><th><a href='shopping_cart.php?order=number'></th></tr>";
+			echo "<a href='shopping_cart.php?order=ClassName'>Class</a></th><th><a href='shopping_cart.php?order=Dept'>Department</a></th><th><a href='shopping_cart.php?order=Fee'>Price</th><th><a href='shopping_cart.php?order=number'>Periods</th></tr>";
 		}
 		
 		//Echoes the individual rows.
@@ -128,10 +142,14 @@ form, table {
 					echo "<img src='$ImageLoc[$i]' width='100' height='100'></td>";
 					echo "<td width='25%'>$ClassName[$i]</td>";
 					echo "<td width='20%'>$Department[$i]</td>";
-					echo "<td width='15%'>$$Fee[$i]</td>";
-					echo "<td width='15%'>$periods[$i]</td>";
+					echo "<td width='10%'>$$Fee[$i]</td>";
+					if ($_GET['current']!=2) { //If you're at 1, remove the minus link
+						echo "<td width='15%'> <a href='shopping_cart.php?subtract=$ClassName[$i]&current=$periods[$i]'>-</a> $periods[$i] <a href='shopping_cart.php?add=$ClassName[$i]'>+</a> </td>";
+					} else {
+						echo "<td width='15%'> - $periods[$i] <a href='shopping_cart.php?add=$ClassName[$i]'>+</a> </td>";
+					}
 					echo "<td>";
-					echo "<input id='$ClassName[$i]' type='submit' action = 'shopping_cart.php' method = 'GET' name='Remove' value='Remove'><input type='hidden' name='class' value='$ClassName[$i]'>";
+					echo "<form action='shopping_cart.php' method='get'><input id='button' type='submit' name='redact' value='Remove'><input type='hidden' name='class' value='$ClassName[$i]'></form>";
 					echo "</td>";
 			echo "</tr>";
 			
