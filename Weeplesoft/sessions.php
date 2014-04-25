@@ -83,15 +83,14 @@ function signUp($username, $password)
 {
     if(getUser($username)) 
     {
-        setFlash("error", "Bad password");
+        setFlash("error", "Invalid password");
         redirect("index.php");
     }
-    if(preg_match('^[a-zA-Z0-9]{8,}$', $username))
+
+    if(!ctype_alnum($username))
     {
-        setFlash("error", "Legal characters inlcude: (A-Z), (a-z), (0-9), ($')");
+        setFlash("error", "Characters must be either letters or numbers");
         redirect("index.php");
-        //preg_match('^[a-zA-Z0-9]{8,}$', $username)
-        //[a-zA-Z0-9]
 
     }
     if(strlen($username) < 1)
@@ -99,17 +98,22 @@ function signUp($username, $password)
         setFlash("error", "Username can't be blank");
         redirect("index.php");        
     }
-	
-    if(strlen($username) < 8)
+    if(strlen($username) > 25)
     {
-        setFlash("error", "Username can't be less than 8 characters");
-        redirect("index.php");        
+        setFlash("error", "Username must not exceed 25 characters");
+        redirect("index.php");   
     }
     if(strlen($password) < 6)
     {
         setFlash("error", "Password is too short");
         redirect("index.php");
     }
+//Commented out, assuming we're not making individual tables
+//    require_once("../html_data/pdoconnection.php");
+//   $db = connect();
+//    $cartname = $username;
+//   $query = "CREATE TABLE $cartname(PersonID int,ClassId int)";
+//    $result = $db->query($query);
     storeUser($username, $password);
     signIn($username, $password);
 }   
@@ -161,7 +165,8 @@ if (!empty($_POST))
 {
     if ($_POST["submit"] == "Create Account")
     {
-        signUp($_POST["username"], $_POST["password"]);
+        signUp($_POST["username"], htmlspecialchars($_POST["password"]));
+        // signUp($_POST["username"], $_POST["password"]);
     }
     elseif ($_POST["submit"] == "Sign Out") 
     {
