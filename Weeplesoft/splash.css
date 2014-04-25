@@ -56,11 +56,7 @@ h2{
 	text-align: center;
 	border:4px solid;
 	border-radius:25px;
-<<<<<<< HEAD
 	background:rgba(160, 160, 160, 0.95); 
-=======
-	background:rgba(160, 160, 160, 0.75); 
->>>>>>> FETCH_HEAD
 	height: 100%;
 	vertical-align: center;
 	padding-bottom: 40px;
@@ -107,6 +103,10 @@ body {
 	font-size: 75px;
 	color: #21610B;
 	text-shadow: -1px 0 #173B0B, 0 1px #173B0B, 1px 0 #173B0B, 0 -1px #173B0B;
+	text-decoration:none;
+	text-decoration:none;
+	text-decoration:none;
+	text-decoration:none;
 }
 
 #backround_img	{
@@ -137,16 +137,16 @@ body {
 		color:white;
 		border-style:outset;
 		border-color:#000000;
-		height:30px;	
-		width:100px;
+		height:40px;	
+		width:200px;
 		}
 #button:hover {
 		background:#000000;
 		color:white;
 		border-style:outset;
 		border-color:#000000;	
-		height:30px;
-		width:100px;
+		height:40px;
+		width:200px;
 		}
  
 /* Make Footer Sticky */
@@ -157,23 +157,33 @@ body {
 					height:40px; 
 					left:0;
 					position:fixed; 
-					width:100%; }
+					width:100%; 
+				}
 
 
 #footer {
 		line-height:40px;
 		margin:0 auto; 
-		width:940px; 
+		width:1000px; 
 		text-align:center; }
-form {
+form 
+{
 	margin-top: 50px;
 	color: rgb(0,0,0);
 }
-.form_font{
-	font-family: 'Varela Round', sans-serif;
-	font-size: 18px;
-	color: #000000;
+.user_password
+{
+	width: 300px;
+	font-size: 20px;
+	border-style:outset;
+	border-color:#000000;
+	background-color: #CEF6CE;
+}
 
+.form_font
+{
+	font-family: 'Galdeano', sans-serif;
+	font-size: 22px;
 }
 .link_on_foot{
 	font-family: 'Varela Round', sans-serif;

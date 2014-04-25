@@ -14,6 +14,7 @@
 			{
 				echo "<span class=\"text_on_foot\">Signed in as $userName</span>";
 				echo "<a class=\"link_on_foot\" href=\"log_out.php\" target=\"\">Logout</a>";
+				echo "<a class=\"link_on_foot\" href=\"shopping_cart.php\" target=\"\">Your Cart</a>";
 			}
 			else
 			{

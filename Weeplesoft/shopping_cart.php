@@ -143,12 +143,10 @@ form, table {
 					echo "<td width='25%'>$ClassName[$i]</td>";
 					echo "<td width='20%'>$Department[$i]</td>";
 					echo "<td width='10%'>$$Fee[$i]</td>";
-					if (!empty($_GET['current'])) {
-					if ($_GET['current']!=2) { //If you're at 1, remove the minus link
-						echo "<td width='15%'> <a href='shopping_cart.php?subtract=$ClassName[$i]&current=$periods[$i]'>-</a> $periods[$i] <a href='shopping_cart.php?add=$ClassName[$i]'>+</a> </td>";
-					} else {
+					if ($_GET['current']==2) { //If you're at 1, remove the minus link
 						echo "<td width='15%'> - $periods[$i] <a href='shopping_cart.php?add=$ClassName[$i]'>+</a> </td>";
-					}
+					} else {
+						echo "<td width='15%'> <a href='shopping_cart.php?subtract=$ClassName[$i]&current=$periods[$i]'>-</a> $periods[$i] <a href='shopping_cart.php?add=$ClassName[$i]'>+</a> </td>";
 					}
 					echo "<td>";
 					echo "<form action='shopping_cart.php' method='get'><input id='button' type='submit' name='redact' value='Remove'><input type='hidden' name='class' value='$ClassName[$i]'></form>";

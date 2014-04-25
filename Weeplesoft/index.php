@@ -29,8 +29,8 @@
 
                 <form action="login.php" method="post">
 
-                    <p class="form_font"> Username: </p> <input type="text" name="username" size="35"><br>
-                    <p class="form_font"> Password: </p> <input name="password" type="password" size="35"><br><br>
+                    <p class= "form_font"> Username: </p> <input type="text" name="username" size="35" class = "user_password"><br>
+                    <p class= "form_font"> Password: </p> <input name="password" type="password" size="35" class = "user_password"><br><br>
 
 
 

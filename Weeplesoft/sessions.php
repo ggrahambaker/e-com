@@ -108,12 +108,11 @@ function signUp($username, $password)
         setFlash("error", "Password is too short");
         redirect("index.php");
     }
-//Commented out, assuming we're not making individual tables
-//    require_once("../html_data/pdoconnection.php");
-//   $db = connect();
-//    $cartname = $username;
-//   $query = "CREATE TABLE $cartname(PersonID int,ClassId int)";
-//    $result = $db->query($query);
+    require_once("../html_data/pdoconnection.php");
+    $db = connect();
+    $cartname = $username;
+    $query = "CREATE TABLE $cartname(PersonID int,ClassId int)";
+    $result = $db->query($query);
     storeUser($username, $password);
     signIn($username, $password);
 }   

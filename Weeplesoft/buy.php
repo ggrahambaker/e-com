@@ -29,12 +29,8 @@ form, table {
 	  require_once("../html_data/pdoconnection.php");
 $db = connect();
 
-//Grab username and GET params
 $username = getCurrentUserName();
-
-$class = $_GET['Class'];
-
-//Checks if the user is enrolling. If so, checks if the entry already exists. If so, lets you know and stops the process. If not, lets you know and inserts it into the cart table. Stores empty, 1 or Array into $existing.
+		$class = $_GET['Class'];
 		$queue = $db->query("SELECT 1 FROM cart WHERE username='$username' AND class='$class'");
 		$existing = $queue->fetch(PDO::FETCH_ASSOC);
 		if (!empty($_GET['enroll'])) 
@@ -47,7 +43,7 @@ $class = $_GET['Class'];
 			echo "<h2>Already in your cart!</h2><br><br>";
 		}
 	}
-//Grabs the rows of table classes			
+			
 $result = $db->query("SELECT * FROM classes WHERE ClassName='$class'");
 while ($row = $result->fetch(PDO::FETCH_ASSOC))
 {
@@ -55,25 +51,35 @@ $ImageLoc = $row['ImageLoc'];
 $Fee = $row['Fee'];
 $LongDesc = $row['LongDesc'];
 }
-//Prints out the table
-echo "<font color=black><table align='center'><tr>";
-echo "<th>Textbook</th>";
-echo "<th>Class</th>";
-echo "<th>Description</th>";
-echo "<th>Price</th>";
-echo "<th>See More</th></tr>";
-echo "<tr><td width='30%'><img src='$ImageLoc' width='100' height='100'></td>";
-echo "<td width='20%'>$class</td>";
-echo "<td width='20%'>$LongDesc</td>";
-echo "<td width='15%'>$$Fee</td>";
-echo "<td width='20%'>";
-//Puts down the "enroll" button, but disables it if that class is already in the cart table.
+echo "<font color=black><table align='center'><tr><th>Textbook</th><th>Class</th><th>Description</th><th>Price</th><th>See More</th></tr><tr><td width='30%'><img src='$ImageLoc' width='100' height='100'></td><td width='20%'>$class</td><td width='20%'>$LongDesc</td><td width='15%'>$$Fee</td><td width='20%'>";
 if (empty($existing)) {
 	echo "<form action='buy.php' method='get'><input id='button' name=enroll type='submit' value='Enroll!'><input type='hidden' name='Class' value='$class'>";
 } else {
 	echo "<form action='buy.php?Class=Mathematics+301' method='get'><input id='disabled' type='submit' name=enroll value='Enroll!' disabled>";
 }
-echo "</form></td></tr></table></font><br><br><a href='classes.php'>Return</a>";					
+echo "</form></td></tr></table></font><br><br><a href='classes.php'>Return</a>";
+	//This is code trying to check for duplicates. Here's mine, below. I'll keep the other for posterity.
+		
+		
+		
+//		$check = $db->query("SELECT class FROM cart");
+//		$duplicate = FALSE;
+//		while ($row = $check->fetch(PDO::FETCH_ASSOC))
+//		{
+//			echo $row['class'];
+//			if($class == $row['class'])
+//			{
+//
+//				// echo "<h2> You've already enrolled in this class! </h2>";
+//				// $duplicate = TRUE;
+//			}
+//		}
+//		if(!$duplicate)
+//		{
+			//$db->query("INSERT INTO $username (username,class) VALUES ('$username','$class')");	
+			
+
+		
 ?>
     </div>
   </div>
