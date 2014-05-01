@@ -39,16 +39,14 @@ function hashPassword($password)
 function authenticate($username, $password)
 {
     $user = getUser($username);
-    if($user == null) 
-    {
+    if($user == null) {
         setFlash("error", "Username not found");
-        redirect("index.php");
+        redirect("http://database.pugetsound.edu/home/tail/html_data/");
     }
     $hasher = new PasswordHash(8,false) or die("unable to hash PW");
-    if (!$hasher->CheckPassword($password, $user[1])) 
-    {
+    if (!$hasher->CheckPassword($password, $user[1])) {
         setFlash("error", "Bad password");
-        redirect("index.php");
+        redirect("http://database.pugetsound.edu/home/tail/html_data/");
     }
 }
 
@@ -66,16 +64,17 @@ function getCurrentUser()
 
 function getCurrentUserName()
 {
+    //    return "Hello world";//getCurrentUser()[0];
+
     $userArray = getCurrentUser();
     return $userArray[0];
 }
 
 function requireUser()
 {
-    if (!getCurrentUser()) 
-    {
+    if (!getCurrentUser()) {
         setFlash("notice", "You have to be signed in to see that page.");
-        redirect("index.php");
+        redirect("/home/tail/html_data/index.php");
     }
 }
 
@@ -84,25 +83,17 @@ function signUp($username, $password)
     if(getUser($username)) 
     {
         setFlash("error", "Bad password");
-        redirect("index.php");
-    }
-    if(preg_match('^[a-zA-Z0-9]{8,}$', $username))
-    {
-        setFlash("error", "Legal characters inlcude: (A-Z), (a-z), (0-9), ($')");
-        redirect("index.php");
-        //preg_match('^[a-zA-Z0-9]{8,}$', $username)
-        //[a-zA-Z0-9]
-
+        redirect("/home/tail/html_data/index.php");
     }
     if(strlen($username) < 1)
     {
         setFlash("error", "Username can't be blank");
-        redirect("index.php");        
+        redirect("/home/tail/html_data/index.php");        
     }
     if(strlen($password) < 6)
     {
         setFlash("error", "Password is too short");
-        redirect("index.php");
+        redirect("/home/tail/html_data/index.php");
     }
     storeUser($username, $password);
     signIn($username, $password);
@@ -114,14 +105,14 @@ function signIn($username, $password)
     authenticate($username, $password);
     setCurrentUser($username);
     setFlash("notice", "You are now signed in.");
-    redirect("dashboard.php");
+    redirect("http://database.pugetsound.edu/home/tail/html_data/");
 }
 
 function signOut()
 {
     setCurrentUser(null);
     setFlash("notice", "You are now signed out.");
-    redirect("index.php");   
+    redirect("http://database.pugetsound.edu/home/tail/html_data/");   
 }
 
 function redirect($url)
@@ -135,10 +126,8 @@ function setFlash($type, $message)
     $_SESSION[$type] = $message;
 }
 
-function getFlash($type) 
-{
-    if (isset($_SESSION[$type])) 
-    {
+function getFlash($type) {
+    if (isset($_SESSION[$type])) {
         return $_SESSION[$type];
     }
 }

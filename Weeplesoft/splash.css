@@ -1,0 +1,426 @@
+body 
+{
+	background-image:url("images/skulls.png");
+	background-repeat:repeat;
+	opacity: 0.8;
+	background-attachment:fixed;
+	background-position:center; 
+	background-color: #000000;
+	color:#B0B0B0;
+}
+
+h1 
+{
+	font-family: 'Galdeano', sans-serif;
+	font-size: 60px;
+	font-variant:small-caps;
+	color: #3E8748;
+}
+
+h2
+{
+	font-family: 'Galdeano', sans-serif;
+	font-size: 30px;
+	color: black;	
+}
+
+input[type=hidden]
+{
+	height: 0.5px;
+	width: 0.5px;
+	font-size: 0.5px;
+}
+
+p
+{
+	color: #000000;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+
+table
+{
+	border: 2px solid #B0B0B0;
+	border-collapse:collapse;
+	margin-right: -2px;
+	margin-left: -2px;
+	margin-bottom: 50px;
+}
+
+th
+{
+	color: #000000;
+	text-decoration:none;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bold;
+	font-weight: bolder;
+	font-size: 23px;
+	height: 50px;
+}
+
+td
+{
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+    border: 2px solid #B0B0B0;
+    border-left: none;
+    border-right: none;
+}
+
+tr:nth-child(odd) { background-color:#D6EBD1; }
+tr:nth-child(even) { background-color:#BAC7B7; }
+
+.table_link
+{
+	color: #000000;
+	text-decoration:none;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bold;
+	font-weight: bolder;
+	font-size: 23px;
+	text-align: center;
+}
+
+.table_link:hover
+{
+	color: darkgreen;
+	text-decoration:none;
+	font-weight: bold;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bolder;
+	font-size: 23px;
+	text-align: center;
+}
+
+.body_text, .privacy_policy_text
+{
+	color: #000000;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+/*.table_header - can probably be deleted later
+{
+	color: #000000;
+	text-decoration:none;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bold;
+	font-weight: bolder;
+	font-size: 23px;
+
+}*/
+
+.class_table
+{
+	table-layout:fixed;
+	width: 100%;
+	color: #000000;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.body_header
+{
+	color: #000000;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bolder;
+	font-size: 30px;
+}
+
+/*float: left;*/
+p.foot {
+	font-family: 'Galdeano', sans-serif;
+	font-size: 20px;
+	color: #E0E0E0;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+h2
+{
+	color: #000000;
+}
+#form_body 
+{	
+	text-align: center;
+	border:4px solid;
+	border-radius:25px;
+	/*background-image: url("images/subtle-mosaic-pattern.png");*/
+	background-image: url("images/textured_stripes.png");
+	/*background: rgba(255, 225, 225, .5);*/
+	background-repeat: repeat;
+	height: 100%;
+	vertical-align: center;
+	padding-bottom: 40px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* Reset body padding and margins */
+body 
+{ 
+	margin:0; 
+	padding:0; 
+}
+ 
+/* Make Header Sticky */
+#header_container 
+{ 
+	background:rgba(0, 0, 0, 0.9); 
+	border:medium groove #2E2E2E; 
+	height:75px; 
+	left: 0; 
+	position:normal;
+	width:100%;
+	top:0; 
+	margin-bottom: 75px;
+}
+
+#header
+{ 
+	line-height:75px; 
+	margin:0 auto; 
+	width:100%; 
+	text-align:center;
+	margin-top: -50px;
+}
+
+.title
+{
+	font-family: 'Galdeano', sans-serif;
+	font-variant:small-caps;
+	letter-spacing: 15px;
+	font-size: 75px;
+	color: #D6EDD3;
+	text-shadow: -1px 0 #173B0B, 0 1px #173B0B, 1px 0 #173B0B, 0 -1px #173B0B;
+	text-decoration:none;
+	text-decoration:none;
+	text-decoration:none;
+	text-decoration:none;
+}
+
+#backround_img	
+{
+	position: relative;
+	margin: 0 auto;	
+}
+ 
+/* CSS for the content of page. I am giving top and bottom padding of 80px to make sure the header and footer do not overlap the content.*/
+#container 
+{
+	margin:0 auto; 
+	overflow:auto; 
+	padding-top:10px 0; 
+	padding-bottom:150px;
+	width:950px; 
+	position: relative;
+	top: 10px;	
+	padding-top: 20px;	
+}
+#content
+{
+
+}
+
+#button,input[type=submit] 
+{
+	font-family: 'Varela Round', sans-serif;
+	background:#83AD7F;
+	color:black;
+	font-size: 12px;
+	border-style:outset;
+	border-color:#000000;
+	vertical-align:	middle;
+	height:40px;	
+	width:200px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
+}
+
+#button:hover,input[type=submit]:hover 
+{
+	background:#000000;
+	color:white;
+	border-style:outset;
+	border-color:#000000;	
+	height:40px;
+	width:200px;
+}
+
+/*input[type=submit].table_button
+{
+	
+}
+input[type=submit]:hover.table_button
+{
+	color: #000000;
+	text-decoration:none;
+	font-family: 'Galdeano', sans-serif;
+	font-weight: bold;
+	font-weight: bolder;
+	font-size: 23px;
+}
+
+.table_button
+{
+	color: #000000 !important;
+	text-decoration:none  !important;
+	font-family: 'Galdeano', sans-serif !important;
+	font-weight: bold  !important;
+	font-weight: bolder !important;
+	font-size: 23px !important;
+}*/
+ 
+/* Make Footer Sticky */
+#footer_container 
+{ 
+	background:rgba(0, 0, 0, 0.8); 
+	border:medium groove #2E2E2E; 
+	bottom:0; 
+	height:40px; 
+	position: fixed; 
+	width:100%; 
+	overflow: visible;
+}
+
+#footer 
+{
+	overflow: visible;
+	text-align: center;
+	color: blue;
+	vertical-align: middle;
+}
+
+.text_on_foot, .link_on_foot
+{
+	font-family: 'Varela Round', sans-serif;
+	color: #E0E0E0;
+	margin-left: 30px;
+	text-align: center;
+	text-decoration:none;
+	padding-top: 10px;
+}
+
+.privacy_policy_text
+{
+	width: 75%;
+	display: inline-block;
+}
+
+form 
+{
+	margin-top: 50px;
+	color: rgb(0,0,0);
+}
+
+.form_font
+{
+	font-family: 'Galdeano', sans-serif;
+	font-size: 22px;
+}
+
+.user_password
+{
+	width: 300px;
+	font-size: 20px;
+	border-style:outset;
+	border-color:#000000;
+	background-color: #D6EDD3;
+}
+
+.user_password_error
+{
+	width: 300px;
+	font-size: 20px;
+	border-style:outset;
+	border-color:#000000;
+	background-color: #FAC3C3;
+}
+
+.right
+{
+	text-align:right;
+}
+
+.link_on_foot:hover
+{
+	font-family: 'Varela Round', sans-serif;
+	color: #84A983;
+	text-decoration:none;
+	text-align: center;
+}
+/*float: left;*/
+
+
+.alert 
+{
+	display: block;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #555;
+	padding: 15px;
+	color: #333;
+	text-align: center;
+	border-radius: 5px;
+	font-family: 'Varela Round', sans-serif;
+	font-size: 15px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
+}
+
+.class-added 
+{
+	background: #83AD7F;
+	border: 2px solid #3E8748;
+	color: black;
+}
+
+.alert-notice 
+{
+	background: #FFFFCC;
+	border: 2px solid #ACB392;
+	color: #82724F;
+}
+
+.alert-error 
+{
+	background: #FCACAC;
+	border: 2px solid #D48787;
+	color: #825353;
+}
+
+.detail 
+{
+	text-align: center;
+	border:2px solid;
+	border-radius:25px;
+	background:rgba(160, 160, 160, 0.75); 
+	height: 70%;
+	vertical-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	border-bottom-left-radius: 25px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
